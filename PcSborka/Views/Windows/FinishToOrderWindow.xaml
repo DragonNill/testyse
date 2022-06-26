@@ -1,0 +1,51 @@
+﻿<Window x:Class="PcSborka.Views.Windows.FinishToOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcSborka.Views.Windows"
+        mc:Ignorable="d"
+        Title="Завершенние заказа" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button  x:Name="Back_button" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Назад" Click="Back_button_Click"></Button>
+            <TextBlock Grid.Row="0" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="5" FontStyle="Italic" FontWeight="Bold">Информация о заказе</TextBlock>
+            <TextBlock x:Name="Address_textBlock" Grid.Row="1" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="5" FontStyle="Italic" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="Email_textBlock" Grid.Row="2" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="5" FontStyle="Italic" FontWeight="Bold"></TextBlock>
+            <TextBlock x:Name="Phone_textBlock" Grid.Row="3" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="5" FontStyle="Italic" FontWeight="Bold"></TextBlock>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="FinishTheComputer_button" FontSize="13" Margin="5"  FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Дособрать компьютер" Click="FinishTheComputer_button_Click"/>
+            <Button x:Name="FinishThePeriphery_button" FontSize="13" Margin="5"  FontStyle="Italic" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False" Content="Посмотреть периферию" Click="FinishThePeriphery_button_Click"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="5" FontStyle="Italic" FontWeight="Bold">Сумма за работу, над сборкой, выбирает сотрудник, она добавится к итоговой сумме сборке</TextBlock>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock x:Name="AllInCost_textBlock"  FontSize="14" Margin="5" FontStyle="Italic" FontWeight="Bold">Цена сборки ? + </TextBlock>
+                <TextBox  MaxLength="5" x:Name="FinalCost_textBox" Width="100" FontSize="12" Margin="5" FontStyle="Italic" FontWeight="Bold" PreviewTextInput="FinalCost_textBox_PreviewTextInput" PreviewKeyDown="FinalCost_textBox_PreviewKeyDown" TextChanged="FinalCost_textBox_TextChanged" Cursor="Arrow"/>
+                <TextBlock x:Name="FinalComputerAssembly_textBlock" TextAlignment="Center"  FontSize="14" Margin="5" FontStyle="Italic" FontWeight="Bold">= Финальная сумма? </TextBlock>
+            </StackPanel>
+            <Button x:Name="EndToOrder_button" Grid.Row="2" HorizontalAlignment="Left"  VerticalAlignment="Center" FontSize="12" Margin="5" FontStyle="Italic" FontWeight="Bold" Visibility="Hidden" Cursor="Hand" Click="EndToOrder_button_Click">Завершить заказ</Button>
+        </Grid>
+    </Grid>
+</Window>

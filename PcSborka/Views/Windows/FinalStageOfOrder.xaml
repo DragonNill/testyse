@@ -1,0 +1,51 @@
+﻿<Window x:Class="PcSborka.Views.Windows.FinalStageOfOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcSborka.Views.Windows"
+        mc:Ignorable="d"
+        Title="FinalStageOfOrder" Height="300" Width="550" MinHeight="275" MinWidth="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="5" FontStyle="Italic" FontWeight="Bold">Добро пожаловать в меню заказа,<LineBreak/>теперь осталось только заполнить<LineBreak/>оставшиеся поля</TextBlock>
+            <Button  x:Name="Back_button" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Назад" Click="Back_button_Click"></Button>
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16" Margin="5" FontStyle="Italic" FontWeight="Bold">Почта:</TextBlock>
+                <TextBox x:Name="Email_textBox" FontSize="16" Margin="5" FontStyle="Italic" FontWeight="Bold" Grid.Column="1"/>
+            </Grid>
+            
+        </Grid>
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16" Margin="5" FontStyle="Italic" FontWeight="Bold">Адрес:</TextBlock>
+            <TextBox x:Name="Address_textBox" FontSize="16" Margin="5" FontStyle="Italic" FontWeight="Bold" Grid.Column="1"/>
+        </Grid>
+        <Grid Grid.Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="16" Margin="5" FontStyle="Italic" FontWeight="Bold">Телефон:</TextBlock>
+            <TextBox x:Name="Phone_textBox" FontSize="16" Margin="5" FontStyle="Italic" FontWeight="Bold" Grid.Column="1" PreviewTextInput="Phone_textBox_PreviewTextInput" PreviewKeyDown="Phone_textBox_PreviewKeyDown" MaxLength="11" Cursor="Arrow"/>
+        </Grid>
+        <Button x:Name="CreateOrder_button" Grid.Row="3" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Click="CreateOrder_button_Click">Сделать заказ</Button>
+    </Grid>
+</Window>

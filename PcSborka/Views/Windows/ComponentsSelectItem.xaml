@@ -1,0 +1,36 @@
+﻿<Window x:Class="PcSborka.Views.Windows.ComponentsSelectItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcSborka.Views.Windows"
+        mc:Ignorable="d"
+        Title="Выбор комплектующих" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Width="650" TextAlignment="Center" FontSize="20" Margin="5" FontStyle="Italic" FontWeight="Bold" Grid.ColumnSpan="2">Меню комплектующих</TextBlock>
+        <!--#region Buttons-->
+        <Button  x:Name="Back_button" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Назад" Click="Back_button_Click"></Button>
+        <Button x:Name="ChooseCPU_button"  Width="300" Grid.Row="1" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top" Content="Процессор" Click="ChooseCPU_button_Click" Cursor="Hand"></Button>
+        <Button x:Name="ChooseMotherBoard_button"  Width="300" Grid.Row="2" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top" Content="Материнская память" Click="ChooseMotherBoard_button_Click" Cursor="Hand"></Button>
+        <Button x:Name="ChooseCase_button" Width="300" Grid.Row="3" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top"   Content="Корпус" Click="ChooseCase_button_Click"></Button>
+        <Button x:Name="ChooseGPU_button" Width="300" Grid.Row="4" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top"   Content="Видеокарта" Click="ChooseGPU_button_Click"></Button>
+        <Button x:Name="ChooseCooler_button" Width="300" Grid.Row="5" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top"   Content="Охлаждение" Click="ChooseCooler_button_Click"></Button>
+        <Button x:Name="ChooseRAM_button" Width="300" Grid.Row="6" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top"   Content="Оперативную память" Click="ChooseRAM_button_Click"></Button>
+        <Button x:Name="ChoosePowerSupply_button" Width="300" Grid.Row="7" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top"   Content="Блок питания" Click="ChoosePowerSupply_button_Click"></Button>
+        <!--#endregion-->
+    </Grid>
+</Window>

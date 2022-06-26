@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище CreatePcForThePeople_dbModelContainer" CdmEntityContainer="CreatePcForThePeopl_dbEntities">
+    <EntitySetMapping Name="Case">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.Case">
+        <MappingFragment StoreEntitySet="Case">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Сharacteristics" ColumnName="Сharacteristics" />
+          <ScalarProperty Name="Form_Factor" ColumnName="Form-Factor" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Computer">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.Computer">
+        <MappingFragment StoreEntitySet="Computer">
+          <ScalarProperty Name="SumComponents" ColumnName="SumComponents" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CPUID" ColumnName="CPUID" />
+          <ScalarProperty Name="MotherBoardID" ColumnName="MotherBoardID" />
+          <ScalarProperty Name="GraphicCardID" ColumnName="GraphicCardID" />
+          <ScalarProperty Name="RAMID" ColumnName="RAMID" />
+          <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+          <ScalarProperty Name="PowerSupplyID" ColumnName="PowerSupplyID" />
+          <ScalarProperty Name="CoolerID" ColumnName="CoolerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cooler">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.Cooler">
+        <MappingFragment StoreEntitySet="Cooler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Сharacteristics" ColumnName="Сharacteristics" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CPU">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.CPU">
+        <MappingFragment StoreEntitySet="CPU">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Socket" ColumnName="Socket" />
+          <ScalarProperty Name="Сharacteristics" ColumnName="Сharacteristics" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employeer">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.Employeer">
+        <MappingFragment StoreEntitySet="Employeer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SecondName" ColumnName="SecondName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GPU">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.GPU">
+        <MappingFragment StoreEntitySet="GPU">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Сharacteristics" ColumnName="Сharacteristics" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Keyboard">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.Keyboard">
+        <MappingFragment StoreEntitySet="Keyboard">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monitor">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.Monitor">
+        <MappingFragment StoreEntitySet="Monitor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Сharacteristics" ColumnName="Сharacteristics" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotherBoard">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.MotherBoard">
+        <MappingFragment StoreEntitySet="MotherBoard">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Socket" ColumnName="Socket" />
+          <ScalarProperty Name="TypeMotherBoardMemory" ColumnName="TypeMotherBoardMemory" />
+          <ScalarProperty Name="Form_Factor" ColumnName="Form-Factor" />
+          <ScalarProperty Name="Сharacteristics" ColumnName="Сharacteristics" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mouse">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.Mouse">
+        <MappingFragment StoreEntitySet="Mouse">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeerID" ColumnName="EmployeerID" />
+          <ScalarProperty Name="ComputerID" ColumnName="ComputerID" />
+          <ScalarProperty Name="PeripheryID" ColumnName="PeripheryID" />
+          <ScalarProperty Name="DateOrder" ColumnName="DateOrder" />
+          <ScalarProperty Name="Accepted" ColumnName="Accepted" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SumOrder" ColumnName="SumOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Periphery">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.Periphery">
+        <MappingFragment StoreEntitySet="Periphery">
+          <ScalarProperty Name="SumPeriphery" ColumnName="SumPeriphery" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MonitorID" ColumnName="MonitorID" />
+          <ScalarProperty Name="MouseID" ColumnName="MouseID" />
+          <ScalarProperty Name="KeyboardID" ColumnName="KeyboardID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerSupply">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.PowerSupply">
+        <MappingFragment StoreEntitySet="PowerSupply">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Сharacteristics" ColumnName="Сharacteristics" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RAM">
+      <EntityTypeMapping TypeName="CreatePcForThePeople_dbModel.RAM">
+        <MappingFragment StoreEntitySet="RAM">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TypeMemory" ColumnName="TypeMemory" />
+          <ScalarProperty Name="Сharacteristics" ColumnName="Сharacteristics" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

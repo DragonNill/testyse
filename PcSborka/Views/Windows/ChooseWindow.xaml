@@ -1,0 +1,48 @@
+﻿<Window x:Class="PcSborka.Views.Windows.ChooseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcSborka.Views.Windows"
+        mc:Ignorable="d"
+        Title="ChooseWindow" Height="450" Width="800" MinHeight="425" MinWidth="775">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="Back_button" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Назад" Click="Back_button_Click"></Button>
+        <TextBlock Width="650" TextAlignment="Center" FontSize="20" Margin="5" FontStyle="Italic" FontWeight="Bold" Grid.ColumnSpan="2">Добро пожаловать в меню  выбора комплектующих</TextBlock>
+        <CheckBox x:Name="BuildPC_checkBox" Content="Дособрать комплектующие" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Left" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"></CheckBox>
+        <!--#region Buttons-->
+        <Button x:Name="ChooseCPU_button" Grid.Row="1" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top" Content="Выбрать процессор" Click="ChooseCPU_button_Click"></Button>
+        <Button x:Name="ChooseMotherBoard_button" Grid.Row="2" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top" Visibility="Hidden"  Content="Выбрать мат. память" Click="ChooseMotherBoard_button_Click" Cursor="Hand"></Button>
+        <Button x:Name="ChooseCase_button" Grid.Row="3" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top" Visibility="Hidden" Content="Выбрать корпус" Click="ChooseCase_button_Click"></Button>
+        <Button x:Name="ChooseGPU_button" Grid.Row="4" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top" Visibility="Hidden" Content="Выбрать видеокарта" Click="ChooseGPU_button_Click"></Button>
+        <Button x:Name="ChooseCooler_button" Grid.Row="5" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top" Visibility="Hidden" Content="Выбрать охлаждение" Click="ChooseCooler_button_Click"></Button>
+        <Button x:Name="ChooseRAM_button" Grid.Row="6" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top" Visibility="Hidden" Content="Выбрать оперативку" Click="ChooseRAM_button_Click"></Button>
+        <Button x:Name="ChoosePowerSupply_button" Grid.Row="7" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top" Visibility="Hidden" Content="Выбрать блок питания" Click="ChoosePowerSupply_button_Click"></Button>
+        <Button x:Name="CreateComputer_button" Grid.Row="8" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Top" HorizontalAlignment="Right" Content="Сделать заказ" Visibility="Hidden" Click="CreateComputer_button_Click" ></Button>
+        <!--#endregion-->
+        <!--#region ListViews-->
+        <ListView x:Name="CPU_listView" Grid.Row="1" Grid.Column="1" Margin="5"></ListView>
+        <ListView x:Name="MotherBoard_listView" Grid.Row="2" Grid.Column="1" Margin="5"></ListView>
+        <ListView x:Name="Case_listView" Grid.Row="3" Grid.Column="1" Margin="5"></ListView>
+        <ListView x:Name="GPU_listView" Grid.Row="4" Grid.Column="1" Margin="5"></ListView>
+        <ListView x:Name="Cooler_listView" Grid.Row="5" Grid.Column="1" Margin="5"></ListView>
+        <ListView x:Name="RAM_listView" Grid.Row="6" Grid.Column="1" Margin="5"></ListView>
+        <ListView x:Name="PowerSupply_listView" Grid.Row="7" Grid.Column="1" Margin="5"></ListView>
+        <!--#endregion-->
+    </Grid>
+</Window>

@@ -1,0 +1,31 @@
+﻿<Window x:Class="PcSborka.Views.Windows.ChoosePeripheryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcSborka.Views.Windows"
+        mc:Ignorable="d"
+       Title="Выбор периферий" Height="450" Width="800" MinHeight="425" MinWidth="775">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button  x:Name="Back_button" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Назад" Click="Back_button_Click"></Button>
+        <TextBlock TextAlignment="Center" FontSize="20" HorizontalAlignment="Center" Margin="5" FontStyle="Italic" FontWeight="Bold" Grid.ColumnSpan="2">Добро пожаловать в меню  выбора периферий</TextBlock>
+        <Button x:Name="ChooseMonitor_button" Grid.Row="1" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Center" Content="Выбрать монитор" Click="ChooseMonitor_button_Click" Cursor="Hand"></Button>
+        <Button x:Name="ChooseMouse_button" Grid.Row="2" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Center"  Content="Выбрать мышку" Click="ChooseMouse_button_Click" Cursor="Hand"></Button>
+        <Button x:Name="ChooseKeyboard_button" Grid.Row="3" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Center"  Content="Выбрать клавиаутра" Click="ChooseKeyboard_button_Click" Cursor="Hand"></Button>
+        <ListView x:Name="Monitor_listView" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Margin="5"></ListView>
+        <ListView x:Name="Mouse_listView" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Margin="5"></ListView>
+        <ListView x:Name="Keyboard_listView" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Margin="5"></ListView>
+        <Button x:Name="CreatePeriphery_button" Grid.Row="8" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Center" HorizontalAlignment="Right" Content="Сделать заказ" Visibility="Hidden" Click="CreatePeriphery_button_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="PcSborka.Views.Windows.PeripherySelectItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcSborka.Views.Windows"
+        mc:Ignorable="d"
+     Title="Выбор периферий" Height="450" Width="800" MinHeight="425" MinWidth="775">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button  x:Name="Back_button" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Назад" Click="Back_button_Click"></Button>
+        <TextBlock TextAlignment="Center" FontSize="20" HorizontalAlignment="Center" Margin="5" FontStyle="Italic" FontWeight="Bold" Grid.ColumnSpan="2">Меню периферий</TextBlock>
+        <Button Width="300" x:Name="ChooseMonitor_button" Grid.Row="1" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Center" Content="Выбрать монитор" Click="ChooseMonitor_button_Click" Cursor="Hand"></Button>
+        <Button Width="300" x:Name="ChooseMouse_button" Grid.Row="2" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Center"  Content="Выбрать мышку" Click="ChooseMouse_button_Click" Cursor="Hand"></Button>
+        <Button Width="300" x:Name="ChooseKeyboard_button" Grid.Row="3" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Center"  Content="Выбрать клавиаутра" Click="ChooseKeyboard_button_Click" Cursor="Hand"></Button>
+    </Grid>
+</Window>

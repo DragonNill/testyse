@@ -1,0 +1,28 @@
+﻿<Window x:Class="PcSborka.Views.Windows.MenuForTheEmployeer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcSborka.Views.Windows"
+        mc:Ignorable="d"
+        Title="MenuForTheEmployeer" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" FontSize="20" Margin="5" FontStyle="Italic" FontWeight="Bold" Grid.ColumnSpan="2">Добро пожаловать в меню сотрудника</TextBlock>
+        <Button  x:Name="Back_button" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Назад" Click="Back_button_Click"></Button>
+        <Button x:Name="CheckCompo_button" Width="300" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Просмотр комплектующих" Click="CheckCompo_button_Click"/>
+        <Button x:Name="CheckPeriphery_button" Width="300" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Просмотр периферий" Grid.Row="1" Click="CheckPeriphery_button_Click"/>
+        <Button x:Name="CheckReadyComputers_button" Width="300" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Просмотр готовых сборок комплектующих" Grid.Row="2" Click="CheckReadyComputers_button_Click"/>
+        <Button x:Name="CheckReadyPeriphery_button" Width="300" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Просмотр готовых сборок периферий" Grid.Row="3" Click="CheckReadyPeriphery_button_Click"/>
+        <Button x:Name="CheckOrder_button" Width="300" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Просмотр заказов" Grid.Row="4" Click="CheckOrder_button_Click"/>
+        <Button x:Name="CheckEmployeers_button" Width="300" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Просмотр сотрудников" Grid.Row="5" Click="CheckEmployeers_button_Click" Cursor="Hand"/>
+    </Grid>
+</Window>

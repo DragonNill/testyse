@@ -1,0 +1,24 @@
+﻿<Window x:Class="PcSborka.Views.Windows.EmployeersShowWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PcSborka.Views.Windows"
+        mc:Ignorable="d"
+        Title="EmployeersShowWindow" Height="350" Width="450" MinHeight="300" MinWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="Emploeeyrs_listView" FontSize="12" Margin="5" FontStyle="Italic" FontWeight="Bold" MouseDoubleClick="Emploeeyrs_listView_MouseDoubleClick"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button  x:Name="Back_button" FontSize="12" Margin="5"  FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Назад" Click="Back_button_Click"></Button>
+            <Button  x:Name="CreateEmployeer_button" FontSize="12" Margin="5" Grid.Column="1"  FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Добавить нового" Click="CreateEmployeer_button_Click" Cursor="Hand"></Button>
+        </Grid>
+    </Grid>
+</Window>

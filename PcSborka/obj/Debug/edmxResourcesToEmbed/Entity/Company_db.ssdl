@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище CreatePcForThePeople_dbModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Case">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Сharacteristics" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Form-Factor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cost" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Computer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CPUID" Type="int" />
+    <Property Name="MotherBoardID" Type="int" />
+    <Property Name="GraphicCardID" Type="int" />
+    <Property Name="RAMID" Type="int" />
+    <Property Name="CaseID" Type="int" />
+    <Property Name="PowerSupplyID" Type="int" />
+    <Property Name="CoolerID" Type="int" />
+    <Property Name="SumComponents" Type="float" />
+  </EntityType>
+  <EntityType Name="Cooler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Сharacteristics" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cost" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CPU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Socket" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Сharacteristics" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cost" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employeer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SecondName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GPU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Сharacteristics" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cost" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Keyboard">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cost" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Monitor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Сharacteristics" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cost" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MotherBoard">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Socket" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TypeMotherBoardMemory" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Form-Factor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Сharacteristics" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cost" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mouse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cost" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeerID" Type="int" />
+    <Property Name="ComputerID" Type="int" Nullable="false" />
+    <Property Name="PeripheryID" Type="int" />
+    <Property Name="DateOrder" Type="date" Nullable="false" />
+    <Property Name="Accepted" Type="bit" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SumOrder" Type="float" />
+  </EntityType>
+  <EntityType Name="Periphery">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MonitorID" Type="int" />
+    <Property Name="MouseID" Type="int" />
+    <Property Name="KeyboardID" Type="int" />
+    <Property Name="SumPeriphery" Type="float" />
+  </EntityType>
+  <EntityType Name="PowerSupply">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Сharacteristics" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cost" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TypeMemory" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Сharacteristics" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Cost" Type="float" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Computer_Case">
+    <End Role="Case" Type="Self.Case" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Computer" Type="Self.Computer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Computer">
+        <PropertyRef Name="CaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Computer_Cooler">
+    <End Role="Cooler" Type="Self.Cooler" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Computer" Type="Self.Computer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cooler">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Computer">
+        <PropertyRef Name="CoolerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Computer_CPU">
+    <End Role="CPU" Type="Self.CPU" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Computer" Type="Self.Computer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CPU">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Computer">
+        <PropertyRef Name="CPUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Computer_GraphicCard">
+    <End Role="GPU" Type="Self.GPU" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Computer" Type="Self.Computer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GPU">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Computer">
+        <PropertyRef Name="GraphicCardID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Computer_MotherBoard">
+    <End Role="MotherBoard" Type="Self.MotherBoard" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Computer" Type="Self.Computer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MotherBoard">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Computer">
+        <PropertyRef Name="MotherBoardID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Computer_PowerSupply">
+    <End Role="PowerSupply" Type="Self.PowerSupply" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Computer" Type="Self.Computer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PowerSupply">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Computer">
+        <PropertyRef Name="PowerSupplyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Computer_RAM">
+    <End Role="RAM" Type="Self.RAM" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Computer" Type="Self.Computer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RAM">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Computer">
+        <PropertyRef Name="RAMID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Oder_Periphery">
+    <End Role="Periphery" Type="Self.Periphery" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Periphery">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="PeripheryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Computer">
+    <End Role="Computer" Type="Self.Computer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Computer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="ComputerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Employeer">
+    <End Role="Employeer" Type="Self.Employeer" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employeer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="EmployeerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Periphery_Keyboard">
+    <End Role="Keyboard" Type="Self.Keyboard" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Periphery" Type="Self.Periphery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Keyboard">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Periphery">
+        <PropertyRef Name="KeyboardID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Periphery_Monitor">
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Periphery" Type="Self.Periphery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Monitor">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Periphery">
+        <PropertyRef Name="MonitorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Periphery_Mouse">
+    <End Role="Mouse" Type="Self.Mouse" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Periphery" Type="Self.Periphery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mouse">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Periphery">
+        <PropertyRef Name="MouseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище CreatePcForThePeople_dbModelContainer">
+    <EntitySet Name="Case" EntityType="Self.Case" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Computer" EntityType="Self.Computer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cooler" EntityType="Self.Cooler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CPU" EntityType="Self.CPU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employeer" EntityType="Self.Employeer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GPU" EntityType="Self.GPU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Keyboard" EntityType="Self.Keyboard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Monitor" EntityType="Self.Monitor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MotherBoard" EntityType="Self.MotherBoard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mouse" EntityType="Self.Mouse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Periphery" EntityType="Self.Periphery" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PowerSupply" EntityType="Self.PowerSupply" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RAM" EntityType="Self.RAM" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Computer_Case" Association="Self.FK_Computer_Case">
+      <End Role="Case" EntitySet="Case" />
+      <End Role="Computer" EntitySet="Computer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Computer_Cooler" Association="Self.FK_Computer_Cooler">
+      <End Role="Cooler" EntitySet="Cooler" />
+      <End Role="Computer" EntitySet="Computer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Computer_CPU" Association="Self.FK_Computer_CPU">
+      <End Role="CPU" EntitySet="CPU" />
+      <End Role="Computer" EntitySet="Computer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Computer_GraphicCard" Association="Self.FK_Computer_GraphicCard">
+      <End Role="GPU" EntitySet="GPU" />
+      <End Role="Computer" EntitySet="Computer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Computer_MotherBoard" Association="Self.FK_Computer_MotherBoard">
+      <End Role="MotherBoard" EntitySet="MotherBoard" />
+      <End Role="Computer" EntitySet="Computer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Computer_PowerSupply" Association="Self.FK_Computer_PowerSupply">
+      <End Role="PowerSupply" EntitySet="PowerSupply" />
+      <End Role="Computer" EntitySet="Computer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Computer_RAM" Association="Self.FK_Computer_RAM">
+      <End Role="RAM" EntitySet="RAM" />
+      <End Role="Computer" EntitySet="Computer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Oder_Periphery" Association="Self.FK_Oder_Periphery">
+      <End Role="Periphery" EntitySet="Periphery" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Computer" Association="Self.FK_Order_Computer">
+      <End Role="Computer" EntitySet="Computer" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Employeer" Association="Self.FK_Order_Employeer">
+      <End Role="Employeer" EntitySet="Employeer" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Periphery_Keyboard" Association="Self.FK_Periphery_Keyboard">
+      <End Role="Keyboard" EntitySet="Keyboard" />
+      <End Role="Periphery" EntitySet="Periphery" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Periphery_Monitor" Association="Self.FK_Periphery_Monitor">
+      <End Role="Monitor" EntitySet="Monitor" />
+      <End Role="Periphery" EntitySet="Periphery" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Periphery_Mouse" Association="Self.FK_Periphery_Mouse">
+      <End Role="Mouse" EntitySet="Mouse" />
+      <End Role="Periphery" EntitySet="Periphery" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

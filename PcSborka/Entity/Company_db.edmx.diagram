@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cd43c9f6f7c54a82b192826e9a117a22" Name="Diagram1">
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.Case" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.Computer" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.Cooler" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.CPU" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.Employeer" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.GPU" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.Keyboard" Width="1.5" PointX="0.75" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.Monitor" Width="1.5" PointX="0.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.MotherBoard" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.Mouse" Width="1.5" PointX="0.75" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.Order" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.Periphery" Width="1.5" PointX="3" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.PowerSupply" Width="1.5" PointX="0.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CreatePcForThePeople_dbModel.RAM" Width="1.5" PointX="0.75" PointY="20.25" IsExpanded="true" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Computer_Case" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Computer_Cooler" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Computer_CPU" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Computer_GraphicCard" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Computer_MotherBoard" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Computer_PowerSupply" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Computer_RAM" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Order_Computer" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Order_Employeer" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Periphery_Keyboard" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Periphery_Monitor" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Periphery_Mouse" ManuallyRouted="false" />
+        <AssociationConnector Association="CreatePcForThePeople_dbModel.FK_Oder_Periphery" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
